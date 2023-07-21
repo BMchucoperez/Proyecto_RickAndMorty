@@ -1,0 +1,27 @@
+.input{
+    width: 60%;
+    height: 50%;
+    padding: 0 0 0 1rem;
+    border: 0px;
+    border-radius: 15px 0px 0px 15;
+}
+
+.div{
+    width: 40vh;
+    height: 8vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0px;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.btn{
+    width: 6vw;
+    height: 4vh;
+    border-radius: 0.3rem;
+    background-color: burlywood;
+    border: none;
+    cursor: pointer;
+}

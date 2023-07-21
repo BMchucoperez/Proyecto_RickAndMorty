@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    margin: 15px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.selects{
+    display: flex;
+    height: 20px;
+    margin: 15 px;
+    justify-content: center;
+}
