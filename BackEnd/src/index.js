@@ -1,7 +1,13 @@
 require("dotenv").config();
-const { PORT, PASSWORD } = process.env;
+const { PORT, DB_USER } = process.env;
 const server = require("./app")
+const { conn } = require('./DB_connection');
 
-server.listen(PORT, () => {
-   console.log('Server raised in port: ' + PORT);
-});
+conn
+  .sync({ alter: true })
+  .then((value) => {
+    server.listen(PORT, () => {
+      console.log("Server & DDBB Running ✅");
+    });
+  })
+  .catch((err) => console.error(err));
