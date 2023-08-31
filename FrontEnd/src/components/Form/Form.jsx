@@ -26,13 +26,19 @@ const Form = (props) => {
     };
 
     const [userData, setUserData] = React.useState({
-        username:'',
+        email:'',
         password:''
     })
 
     return(
-        <div className={style.container}>
+        <div className={style.fondo}>
+            <div className={style.container}>
+            <div className={style.title}>
+                <h1>Welcome to the Rick and Morty App!</h1>
+            </div>
             
+            <br />
+
             <div className={style.formulario} >
             <form onSubmit={handleSubmit} >
             <label>Email: </label>
@@ -42,7 +48,9 @@ const Form = (props) => {
             value={userData.email}
             onChange={handleChange}
             autoComplete="off" />
-            <p className={style.error}>{errors.email && errors.email}</p>
+            <p className={style.error}>
+                {errors.email && errors.email}
+            </p>
             <hr />
 
             <label>Password: </label>
@@ -52,15 +60,19 @@ const Form = (props) => {
             value={userData.password}
             onChange={handleChange}
             autoComplete="off" />
-            <p className={style.error}>{errors.password && errors.password}</p>
+            <p className={style.error}>
+                {errors.password && errors.password}
+            </p>
             <hr />
 
             <button className={style.button}
-            type="submit" >Submit</button>
+            type="submit" >Log In</button>
 
             </form>
             </div>
         </div>
+        </div>
+        
        
         
     )

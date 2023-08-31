@@ -1,12 +1,12 @@
 import Card from '../Card/Card';
-import {CardsContainer} from "./styledComponents";
+import style from "./Cards.module.css";
 
 
 export default function Cards(props) {
    
    return (
-      <CardsContainer>
-      {
+      <div className={style.container}>
+         {
          props.characters.map((pj) => {
             return (
             <Card 
@@ -23,6 +23,6 @@ export default function Cards(props) {
             );
          })
       }
-      </CardsContainer>
+      </div>
    );
 }

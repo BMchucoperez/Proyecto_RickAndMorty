@@ -4,14 +4,14 @@ const validation = (userData) => {
 
     let errors = {};
 
-    if(!regexEmail.test(userData.username)){
-        errors.username = "El email es inválido";
+    if(!regexEmail.test(userData.email)){
+        errors.email = "El email es inválido";
     }
-    if(!userData.username){
-        errors.username = "Este campo no puede estar vacío";
+    if(!userData.email){
+        errors.email = "Este campo no puede estar vacío";
     }
-    if(userData.username.length > 35){
-        errors.username = "El email no puede superar los 35 caracteres";
+    if(userData.email.length > 35){
+        errors.email = "El email no puede superar los 35 caracteres";
     }
     if(!userData.password.match(/\d/)){
         errors.password = "La contraseña debe contener al menos 1 número";

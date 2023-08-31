@@ -1,7 +1,6 @@
 import Nav from './components/Nav/Nav.jsx';
 import React, { useState, useEffect } from 'react';
 import {Routes, Route, useLocation, useNavigate} from "react-router-dom";
-import About from './components/About/About';
 import Detail from './components/Detail/Detail';
 import Form from "./components/Form/Form.jsx"
 import Favorites from './components/Favorites/Favorites.jsx';
@@ -83,10 +82,11 @@ function App() {
                )
             }
             />
-            <Route path="/about" element = {<About/>}/>
+            
             <Route path="/detail/:id" element = {<Detail/>}/>
             <Route path="/" element={<Form login={login} />} />
             <Route path="/favorites" element = {<Favorites/>}/>
+            
          </Routes>
                    
       </div>

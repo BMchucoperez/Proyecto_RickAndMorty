@@ -1,7 +1,72 @@
 .container{
-    background-color: rgb(174, 155, 155);
     display: flex;
-    gap: 20px;
-    width: 100%;
+    align-items: center;
+    padding: 3px;
+    background: linear-gradient(36deg,#dcd59f 0%, #9ce179 80%);
+    color: rgb(255, 255, 255);
+    height: 55px;
+    position: fixed;
+    top: 0;
+    width: 100%;   
     justify-content: space-between;
+    gap: 20px;
+}
+
+@media (max-width: 980px){
+    .container{
+        height: 80px;
+    }
+}
+
+.subcontenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+}
+
+.search{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.iconGitHub{
+    margin-right: 40px;
+    width: fit-content;
+    height: 33px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+.iconLinkedin{
+    width: fit-content;
+    height: 28px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+.iconGitHub:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.iconLinkedin:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(66, 39, 39);
+    font-size: 3vh;
+    font-weight: bolder;
+    padding: 1.1vh;
+    border-radius: 14% / 44%;
+    background-color: rgba(22, 22, 22, 0.425), 0%;
+    transition: background-color 0.4s;
+}
+
+.link:hover{
+    background-color: rgba(211, 219, 219, 0.079);
+    transform: scale(1.1, 1.1);
 }

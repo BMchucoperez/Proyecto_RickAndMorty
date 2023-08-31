@@ -27,21 +27,20 @@ export default function Detail(){
       }, []);
 
     return(
-        <div className={style.container}>
-            
+        <div className={style.all}>
+          <div className={style.container}>
             <h1>{pjDetail.name && pjDetail.name}</h1>
-            <h2>{pjDetail.status ? pjDetail.status : ":( no hay status"}</h2>
+            <h2>Status: {pjDetail.status ? pjDetail.status : ":( no hay status"}</h2>
             <img 
             className={style.cardImage}
             src={pjDetail.image} alt={pjDetail.name} />
+            <br />
             <section className={style.cardInfo}>
-              <span>{pjDetail.species}</span>
-              <span>{pjDetail.gender}</span>
-              <span>{pjDetail.origin?.name}</span>
+              <span>Specie: {pjDetail.species}</span>
+              <span>Gender: {pjDetail.gender}</span>
+              <span>Origin: {pjDetail.origin?.name}</span>
             </section>
-                        
+          </div>
         </div>
-                   
-       
     );
 }

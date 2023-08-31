@@ -51,36 +51,45 @@ export default function Card({
     }, [favorites]);
 
    return (
-      <div className = {style.container} >
-         {onClose ? (
-         <button 
-         className={style.closeButton} 
-         onClick={() => onClose(id)}>
-            Eliminar
-         </button>
-         ) : null}
-         <h2> Name: {name} </h2>
-         <h2> Status: {status} </h2>
-         <h2> Species: {species}</h2>
-         <h2> Gender: {gender} </h2>
-         <h2> Origin: {origin} </h2>
-         <h2> Key: {id} </h2>
-         <Link to = {`/detail/${id}`} > 
-         <img 
-         src={image} 
-         alt ={name} 
-         />
-         
-         </Link>
-         
-         {
-            isFav ? (
+      <div className = {style.container}>
+         <div className = {style.card}>
+            {onClose 
+            ? 
+            (
+            <button 
+            className={style.closeButton} 
+            onClick={() => onClose(id)}>
+               ✖
+            </button>
+            ) 
+            : 
+            null}
+            
+            <h2>{name}</h2>
+            
+                       
+                     
+            <Link to = {`/detail/${id}`} > 
+            <img 
+            className={style.image}
+            src={image} 
+            alt ={name} 
+            />
+            </Link>
+            
+            <h4>{id}</h4>
+            {isFav 
+            ? 
+            (
              <button onClick={handleFavorite}>❤️</button>
-            ) : (
+            ) 
+            : 
+            (
              <button onClick={handleFavorite}>🤍</button>
-            )
-         }
+            )}
+         </div>
       </div>
+      
    );
 }
 

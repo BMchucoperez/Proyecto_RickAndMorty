@@ -24,19 +24,25 @@ export default function Favorites () {
     }
 
     return(
-        <div>
-            <div className={style.selects} >
-            <select onChange={handleOrder} >
-                <option value="A">Ascendente</option>
-                <option value="D">Descendente</option>
+        <div className={style.total}>
+            <div className={style.list} >
+            <select onChange={handleOrder} className={style.selects}>
+                <option value="option1" disabled selected hidden>
+                    Order by number
+                </option>
+                <option value="A">Ascending</option>
+                <option value="D">Descending</option>
             </select>
             
-            <select onChange={handleFilter} >
+            <select onChange={handleFilter} className={style.selects}>
+                <option value="option2" disabled selected hidden>
+                    Order by gender
+                </option>
+                <option value="unknown">Unknown</option>
+                <option value="Genderless">Genderless</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
                 <option value="RESET">RESET</option>
-                <option value="unknown">UNKNOWN</option>
-                <option value="Genderless">GENDERLESS</option>
-                <option value="Female">FEMALE</option>
-                <option value="Male">MALE</option>
             </select>
             </div>
             
