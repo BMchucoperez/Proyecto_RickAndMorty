@@ -1,0 +1,44 @@
+.container{
+    margin-top: 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../../images/fondo2.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    min-height: 100vh;
+}
+
+.selects{
+    border: none;
+    width: 40%;
+    border-radius: 6px;
+    background-color: #2cade4;
+    color: #000000a0;
+    font-size: 20px;
+    font-family: 'Optima';
+    text-align: left;
+    justify-content: left;
+    text-shadow: 2px 1px 7px rgba(0,0,0,0.6);
+    cursor: pointer;
+    color:beige;
+}
+
+.list{
+    display: flex;
+    height: 35px;
+    justify-content: space-around;
+    margin-top: 130px;
+    width: 40%;
+    padding: auto;
+    
+}
